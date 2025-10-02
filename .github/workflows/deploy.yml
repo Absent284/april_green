@@ -20,4 +20,5 @@ jobs:
           port: 22
           local_path: ./
           remote_path: Page/
-          sftp_only: true
+          sftp_only: false                        # <-- erlaubt 'ssh mkdir -p'
+          sftpArgs: "-o StrictHostKeyChecking=no" # optional
