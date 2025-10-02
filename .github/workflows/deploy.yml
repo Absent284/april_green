@@ -19,6 +19,6 @@ jobs:
           password: AprilGreen4444                              
           port: 22
           local_path: ./
-          remote_path: page/
+          remote_path: /page/
           sftp_only: true                        
           sftpArgs: "-o StrictHostKeyChecking=no" # optional
