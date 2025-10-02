@@ -19,6 +19,6 @@ jobs:
           password: ${{ secrets.APRIL_PASSWORD }}
           port: 22
           local_path: ./
-          remote_path: Page/
-          sftp_only: false                        # <-- erlaubt 'ssh mkdir -p'
+          remote_path: page/
+          sftp_only: true                        
           sftpArgs: "-o StrictHostKeyChecking=no" # optional
