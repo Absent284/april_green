@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>April Green – Sängerin aus Görlitz</title>
+  <meta name="description" content="April Green ist eine Sängerin aus Görlitz. Mit kraftvoller Stimme und Begleitung am Klavier und an der Gitarre verleiht sie bekannten Songs ihre eigene, berührende Note – perfekt für Hochzeiten, Feiern und besondere Anlässe." />
+  <meta property="og:title" content="April Green – Sängerin aus Görlitz" />
+  <meta property="og:description" content="Kraftvolle Stimme, stilvolle Covers, stimmungsvolle Begleitung – der perfekte Act für Ihre Feier." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/april-green-cover.jpg" />
+  <meta name="theme-color" content="#8CCF90" />
+  <!-- Optional: schöne, ruhige Schrift -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-1: #edf7ee;  /* sehr hell pastell */
+      --green-2: #cfead3;  /* hell */
+      --green-3: #8ccf90;  /* mittel */
+      --green-4: #3ba46a;  /* akzent */
+      --txt: #14321f;      /* dunkles grünlich */
+      --txt-soft: #2f5a3d;
+      --card: rgba(255, 255, 255, 0.7);
+      --border: rgba(20, 50, 31, 0.08);
+      --shadow: 0 10px 30px rgba(20,50,31,.12);
+    }
+
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: "Outfit", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--txt);
+      background: radial-gradient(1200px 800px at 15% 20%, var(--green-2), transparent),
+                  radial-gradient(1200px 800px at 85% 10%, #e7f4eb, transparent),
+                  linear-gradient(180deg, var(--green-1), #f7fbf8 60%);
+      background-attachment: fixed;
+    }
+
+    .wrap {
+      min-height: 100dvh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    header {
+      padding: 1.25rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand {
+      display: inline-flex;
+      gap: .75rem;
+      align-items: center;
+      padding: .5rem 1rem;
+      background: linear-gradient(135deg, rgba(255,255,255,.65), rgba(255,255,255,.35));
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+    .leaf {
+      width: 22px; height: 22px; border-radius: 6px;
+      background: conic-gradient(from 180deg, var(--green-4), var(--green-3), var(--green-2));
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,.05);
+    }
+    .brand span { font-weight: 600; letter-spacing: .2px; }
+
+    main {
+      display: grid;
+      place-items: center;
+      padding: 2rem 1rem 3rem;
+    }
+
+    .card {
+      width: min(980px, 100%);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+    }
+
+    .hero {
+      display: grid;
+      gap: 1.25rem;
+      padding: clamp(1.25rem, 2vw + 1rem, 2rem);
+    }
+
+    .tag {
+      display: inline-flex; align-items: center; gap: .5rem;
+      border: 1px solid var(--border);
+      padding: .35rem .65rem;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255,255,255,.9), rgba(255,255,255,.6));
+      font-size: .85rem; color: var(--txt-soft);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 3vw + 1rem, 3rem);
+      line-height: 1.1;
+      letter-spacing: .3px;
+    }
+
+    .subtitle { font-size: clamp(1.05rem, .5vw + 1rem, 1.2rem); color: var(--txt-soft); }
+
+    .media {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: repeating-linear-gradient(45deg, rgba(139, 207, 144, .15) 0 12px, rgba(139,207,144,.2) 12px 24px);
+      display: grid;
+    }
+    .media img { width: 100%; height: auto; display: block; }
+
+    /* Responsive: Bild neben Text auf großen Screens */
+    @media (min-width: 880px) {
+      .hero { grid-template-columns: 1.1fr .9fr; align-items: center; }
+    }
+
+    .copy { display: grid; gap: 1rem; }
+
+    .cta {
+      display: flex; flex-wrap: wrap; gap: .75rem; align-items: center;
+      margin-top: .25rem;
+    }
+
+    .pill {
+      display: inline-flex; align-items: center; gap: .55rem;
+      border-radius: 999px;
+      padding: .7rem 1rem;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.65));
+      text-decoration: none; color: var(--txt);
+      box-shadow: 0 4px 14px rgba(20,50,31,.08);
+    }
+
+    .pill strong { letter-spacing: .2px; }
+
+    .mail { font-weight: 600; color: var(--green-4); text-decoration: none; }
+    .mail:hover { text-decoration: underline; }
+
+    footer {
+      padding: 1.5rem; text-align: center; color: var(--txt-soft);
+      font-size: .95rem;
+    }
+
+    /* Platzhalter-Block fürs Foto (falls noch kein Bild verlinkt ist) */
+    .placeholder {
+      aspect-ratio: 16 / 10; /* kannst du anpassen (z.B. 4/5 für Portrait) */
+      display: grid; place-items: center; text-align: center;
+      color: var(--txt-soft); padding: 2rem;
+    }
+    .placeholder small { opacity: .9; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand" aria-label="Marke">
+        <div class="leaf" aria-hidden="true"></div>
+        <span>April Green</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="card hero" aria-labelledby="title">
+        <div class="copy">
+          <span class="tag"><marquee>Website im Aufbau</marquee></span>
+          <h1 id="title">April Green – Sängerin aus Görlitz</h1>
+          <p class="subtitle">Stilvolle Interpretationen bekannter Songs. Kraftvolle Stimme, feine Nuancen – begleitet von Klavier und Gitarre.</p>
+          <p>
+            April Green verleiht vertrauten Liedern eine persönliche, zeitgemäße Note. Mit ihrer <strong>kraftvollen und warmen Stimme</strong> sowie der <strong>einfühlsamen Begleitung</strong> durch ihre Musikerkollegen an <strong>Klavier</strong> und <strong>Gitarre</strong> schafft sie einen Klangraum, der berührt und im Gedächtnis bleibt. Ihr Repertoire reicht von leisen, gefühlvollen Momenten bis zu energiegeladenen Höhepunkten – stets stilvoll und passend zum Anlass.
+          </p>
+          <p>
+            Ob <strong>Hochzeit</strong>, <strong>Firmenevent</strong> oder <strong>private Feier</strong>: April ist der <em>perfekte Act</em> für Ihre Veranstaltung und entwickelt auf Wunsch ein individuelles Programm, das Atmosphäre schafft und den besonderen Charakter Ihres Moments unterstreicht.
+          </p>
+          <div class="cta" role="group" aria-label="Kontaktinformationen">
+            <a class="pill" href="mailto:april.green.goerlitz@gmail.com">
+              ✉️ <strong>Anfragen &amp; Buchung</strong>
+            </a>
+            <span class="pill" aria-live="polite">Fragen? Schreiben Sie an&nbsp;<a class="mail" href="mailto:april.green.goerlitz@gmail.com">april.green.goerlitz@gmail.com</a></span>
+          </div>
+        </div>
+
+        <img src="assets/foto.jpg" alt="April Green – Sängerin aus Görlitz" loading="lazy" width="380" height="400" style="border: solid 4px #14321f;">
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> April Green · Görlitz
+    </footer>
+  </div>
+
+  <script>
+    // Jahreszahl automatisch aktualisieren
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
