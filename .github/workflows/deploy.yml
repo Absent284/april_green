@@ -14,9 +14,9 @@ jobs:
       - name: Deploy via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.APRIL_HOSTNAME }}      # -> ssh.strato.de ODER 5018…w2.strato.hosting
-          username: ${{ secrets.APRIL_USERNAME }}
-          password: ${{ secrets.APRIL_PASSWORD }}
+          server: 5018256292.ssh.w2.strato.hosting
+          username: su397835
+          password: AprilGreen4444                              
           port: 22
           local_path: ./
           remote_path: page/
