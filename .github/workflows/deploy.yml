@@ -20,5 +20,4 @@ jobs:
           port: 22
           local_path: ./
           remote_path: ${{ secrets.APRIL_REMOTE_DIR }}
-          delete_remote_files: false
           sftp_only: true
