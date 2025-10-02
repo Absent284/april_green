@@ -1,0 +1,30 @@
+name: Deploy to Strato (FTPS)
+
+on:
+  push:
+    branches: [ main ]   # läuft bei jedem Push auf main
+  workflow_dispatch:      # optional: manuell startbar im Actions-Tab
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.APRIL_HOSTNAME }}
+          username: ${{ secrets.APRIL_USERNAME }}
+          password: ${{ secrets.APRIL_PASSWORD }}
+          protocol: ftps
+          local-dir: ./                      # dein Repo-Root
+          server-dir: ${{ secrets.APRIL_REMOTE_DIR }}   # z. B. /page/
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
+            **/*.md
+            **/*.map
+            **/.DS_Store
+          state-name: .ftp-deploy-sync-state.json
