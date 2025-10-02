@@ -14,17 +14,11 @@ jobs:
       - name: Deploy via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.APRIL_HOSTNAME }}
+          server: ${{ secrets.APRIL_HOSTNAME }}      # -> ssh.strato.de ODER 5018…w2.strato.hosting
           username: ${{ secrets.APRIL_USERNAME }}
           password: ${{ secrets.APRIL_PASSWORD }}
-          protocol: ftps
-          local-dir: ./                      # dein Repo-Root
-          server-dir: ${{ secrets.APRIL_REMOTE_DIR }}   # z. B. /page/
-          exclude: |
-            **/.git*
-            **/.github/**
-            **/node_modules/**
-            **/*.md
-            **/*.map
-            **/.DS_Store
-          state-name: .ftp-deploy-sync-state.json
+          port: 22
+          local_path: C:\Users\RobertBild\00_Programming\April_Green
+          remote_path: ${{ secrets.APRIL_REMOTE_DIR }}
+          delete_remote_files: false
+          sftp_only: true
